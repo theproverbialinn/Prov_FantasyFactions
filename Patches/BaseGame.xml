@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+		<mods>
+		  <li>Royalty</li>
+		</mods>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="MeleeWeapon_Gladius"]/weaponTags</xpath>
+            <value>
+                <li>MeleeWeapon_Gladius</li>
+            </value>
+        </match>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="MeleeWeapon_Club"]/weaponTags</xpath>
+            <value>
+                <li>MeleeWeapon_Club</li>
+            </value>
+        </match>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="DevDesigner_WoodElves_Bow"]/weaponTags</xpath>
+            <value>
+                <li>DevDesigner_WoodElves_Bow</li>
+            </value>
+        </match>
+    </Operation>
+</Patch>

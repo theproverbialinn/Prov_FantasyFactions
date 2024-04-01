@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <XenotypeDef Name="Prov_ElfXenotype" MayRequire="Ludeon.RimWorld.Biotech" Abstract="true">
+    <defName>Prov_ElfXenotype</defName>
+    <label>elf</label>
+    <description>Base elf xenotype (FR).</description>
+    <descriptionShort>Base elf xenotype (FR).</descriptionShort>
+    <nameMaker>DevDesigner_WoodElves_NamerMale</nameMaker>
+    <nameMakerFemale>DevDesigner_WoodElves_NamerFemale</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>DevDesigner_Ageless</li>
+		<li>AG_SlowerAging</li>
+		<li>Hair_LongOnly</li>
+		<li>Beard_NoBeardOnly</li>
+		<li>Body_Standard</li>
+		<li>Outland_YouthfulAgeing</li>
+		<li>DarkVision</li>
+	</genes>
+  </XenotypeDef>
+
+  <XenotypeDef Name="Prov_EladrinWinterXenotype" ParentName="Prov_ElfXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinWinterXenotype</defName>
+    <label>winter eladrin</label>
+    <description>Eladrin xenotype (winter).</description>
+    <descriptionShort>Base elf xenotype (winter).</descriptionShort>
+    <nameMaker>DevDesigner_WoodElves_NamerMale</nameMaker>
+    <nameMakerFemale>DevDesigner_WoodElves_NamerFemale</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>Hair_LightTeal</li>
+		<li>Hair_MediumBlue</li>
+		<li>Outland_HairColor_PastelBlue</li>
+		<li>Outland_HairColor_SkyBlue</li>
+		<li>Skin_Blue</li>
+		<li>AG_Skin_DeepBlue</li>
+		<li>Outland_Skin_Marine</li>
+		<li>Outland_Skin_MossBright</li>
+		<li>Outland_Eye_LightBlue</li>
+      <li>AG_UnderdevelopedTeeth</li>
+		<li>MoveSpeed_Slow</li>
+		<li>Mood_Depressive</li>
+		<li>MinTemp_HugeDecrease</li>
+		<li>AG_ColdRadiating</li>
+		<li>Libido_Low</li>
+		<li>AptitudeTerrible_Construction</li>
+		<li>AptitudeStrong_Artistic</li>
+		<li>AptitudeStrong_Intellectual</li>
+	</genes>
+  </XenotypeDef>
+  
+  <XenotypeDef ParentName="Prov_EladrinWinterXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinWinterToSummerXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinSummerXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>  
+  <XenotypeDef ParentName="Prov_EladrinWinterXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinWinterToAutumnXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinAutumnXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>  
+  <XenotypeDef ParentName="Prov_EladrinWinterXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinWinterToSpringXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinSpringXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>
+  
+  
+  <XenotypeDef Name="Prov_EladrinSpringXenotype" ParentName="Prov_ElfXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinSpringXenotype</defName>
+    <label>spring eladrin</label>
+    <description>Eladrin xenotype (spring).</description>
+    <descriptionShort>Base elf xenotype (spring).</descriptionShort>
+    <nameMaker>DevDesigner_WoodElves_NamerMale</nameMaker>
+    <nameMakerFemale>DevDesigner_WoodElves_NamerFemale</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>BS_MatteGreenHair</li>
+		<li>AG_Hair_PaleGreen</li>
+		<li>Outland_HairColor_Lime</li>
+		<li>Outland_HairColor_PastelGreen</li>
+		<li>AG_Skin_DeepGreen</li>
+		<li>AG_Skin_PlantGreen</li>
+		<li>Outland_Skin_GreenDeep</li>
+		<li>Outland_Skin_GreenPine</li>
+		<li>Outland_Eye_Lime</li>
+		<li>Mood_Sanguine</li>
+		<li>MinTemp_SmallIncrease</li>
+		<li>Libido_High</li>
+		<li>AptitudePoor_Mining</li>
+		<li>AptitudePoor_Intellectual</li>
+	</genes>
+  </XenotypeDef>
+  
+  
+  <XenotypeDef ParentName="Prov_EladrinSpringXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinSpringToSummerXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinSummerXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>  
+  <XenotypeDef ParentName="Prov_EladrinSpringXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinSpringToAutumnXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinAutumnXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>  
+  <XenotypeDef ParentName="Prov_EladrinSpringXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinSpringToWinterXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinWinterXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>
+  
+  
+  <XenotypeDef Name="Prov_EladrinSummerXenotype" ParentName="Prov_ElfXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinSummerXenotype</defName>
+    <label>summer eladrin</label>
+    <description>Eladrin xenotype (summer).</description>
+    <descriptionShort>Base elf xenotype (summer).</descriptionShort>
+    <nameMaker>DevDesigner_WoodElves_NamerMale</nameMaker>
+    <nameMakerFemale>DevDesigner_WoodElves_NamerFemale</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>Hair_Blonde</li>
+		<li>BS_CreamHair</li>
+		<li>AG_Hair_Golden</li>
+		<li>Outland_HairColor_Yellow</li>
+		<li>Skin_DeepYellow</li>
+		<li>Skin_PaleYellow</li>
+		<li>Outland_Skin_Mustard</li>
+		<li>Outland_Skin_YellowPastel</li>
+		<li>Outland_Eye_Yellow</li>
+		<li>Turn_Gene_TraitGrandeur</li>
+		<li>MaxTemp_HugeIncrease</li>
+		<li>AG_HeatRadiating</li>
+		<li>Aggression_Aggressive</li>
+		<li>AG_Rowdy</li>
+		<li>AptitudeStrong_Shooting</li>
+		<li>AptitudeStrong_Melee</li>
+		<li>AptitudeStrong_Construction</li>
+		<li>AptitudePoor_Plants</li>
+		<li>AptitudeTerrible_Animals</li>
+		<li>AptitudeTerrible_Medicine</li>
+	</genes>
+  </XenotypeDef>
+    
+  
+  <XenotypeDef ParentName="Prov_EladrinSummerXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinSummerToSpringXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinSpringXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>  
+  <XenotypeDef ParentName="Prov_EladrinSummerXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinSummerToAutumnXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinAutumnXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>  
+  <XenotypeDef ParentName="Prov_EladrinSummerXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinSummerToWinterXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinWinterXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>
+  
+  <XenotypeDef Name="Prov_EladrinAutumnXenotype" ParentName="Prov_ElfXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinAutumnXenotype</defName>
+    <label>autumn eladrin</label>
+    <description>Eladrin xenotype (autumn).</description>
+    <descriptionShort>Base elf xenotype (autumn).</descriptionShort>
+    <nameMaker>DevDesigner_WoodElves_NamerMale</nameMaker>
+    <nameMakerFemale>DevDesigner_WoodElves_NamerFemale</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>Hair_LightOrange</li>
+		<li>AG_Hair_DeepOrange</li>
+		<li>Skin_Orange</li>
+		<li>BS_SkinBurningOrange</li>
+		<li>Outland_Skin_OrangePastel</li>
+		<li>Outland_Skin_Copper</li>
+		<li>Outland_Eye_Orange</li>
+      <li>AG_UnderdevelopedTeeth</li>
+      <li>Outland_KindEyes</li>
+      <li>Aggression_DeadCalm</li>
+      <li>MeleeDamage_Weak</li>
+      <li>KindInstinct</li>
+      <li>AG_ArrestAvoidance</li>
+      <li>AptitudePoor_Shooting</li>
+      <li>AptitudePoor_Melee</li>
+      <li>AptitudeStrong_Construction</li>
+      <li>AptitudePoor_Mining</li>
+      <li>AptitudeStrong_Cooking</li>
+      <li>AptitudeStrong_Plants</li>
+      <li>AptitudeStrong_Animals</li>
+      <li>AptitudeStrong_Medicine</li>
+      <li>AG_MiningYield_Low</li>
+	</genes>
+  </XenotypeDef>
+    
+  
+  <XenotypeDef ParentName="Prov_EladrinAutumnXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinAutumnToSpringXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinSpringXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>  
+  <XenotypeDef ParentName="Prov_EladrinAutumnXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinAutumnToSummerXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinSummerXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>  
+  <XenotypeDef ParentName="Prov_EladrinAutumnXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_EladrinAutumnToWinterXenotype</defName>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+	<genes>
+		<li>VRE_Morphs_Prov_EladrinWinterXenotype</li>
+		<li>VRE_Morphs_RandomMorphing</li>
+	</genes>
+  </XenotypeDef>
+  
+  
+  <XenotypeDef ParentName="Prov_ElfXenotype" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Prov_WoodElfXenotype</defName>
+    <label>wood elf</label>
+    <description>Wood elf xenotype (FR).</description>
+    <descriptionShort>Wood elf xenotype (FR).</descriptionShort>
+    <nameMaker>DevDesigner_WoodElves_NamerMale</nameMaker>
+    <nameMakerFemale>DevDesigner_WoodElves_NamerFemale</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Prov_XenoElfBase</iconPath>
+    <genes>
+		<li>Hair_ReddishBrown</li>
+		<li>Hair_DarkBrown</li>
+		<li>Hair_DarkSaturatedReddish</li>
+		<li>Hair_DarkReddish</li>
+		<li>Outland_Skin_RedSubtle</li>
+		<li>Outland_Skin_DirtBrown</li>
+		<li>Outland_Skin_DarkBrown</li>
+		<li>Outland_Skin_LightBrown</li>
+		<li>Outland_Skin_UmberBurnt</li>
+		<li>Outland_Skin_BrownWood</li>
+		<li>DevDesigner_DryadEars</li>
+		<li>Outland_ElvenEars</li>
+		<li>MinTemp_SmallIncrease</li>
+		<li>Pain_Extra</li>
+		<li>AptitudeStrong_Shooting</li>
+    </genes>
+  </XenotypeDef>
+
+  
+</Defs>

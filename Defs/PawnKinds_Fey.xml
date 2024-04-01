@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="Prov_FeyPawnkind_Base" Abstract="true">
+    <race>Human</race>
+    <minGenerationAge>18</minGenerationAge>
+    <maxGenerationAge>80</maxGenerationAge>
+    <defaultFactionType>Prov_FeyFactionBase</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <biocodeWeaponChance>0</biocodeWeaponChance>
+    <humanPregnancyChance>0</humanPregnancyChance>
+    <invNutrition>3</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <itemQuality>Normal</itemQuality>
+    <gearHealthRange>1~1</gearHealthRange>
+    <techHediffsMoney>0~1</techHediffsMoney>
+    <techHediffsTags></techHediffsTags>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <backstoryCategories>
+      <li>Tribal</li>
+    </backstoryCategories>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+
+
+  <!-- Prov_Hag -->
+  <PawnKindDef ParentName="Prov_FeyPawnkind_Base">
+    <defName>Prov_Hag</defName>
+    <label>hag</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_FeyHagCoven</defaultFactionType>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_HagXenotype MayRequire="Ludeon.RimWorld.Biotech">100</Prov_HagXenotype>
+      </xenotypeChances>
+    </xenotypeSet> 
+    <apparelMoney>200~550</apparelMoney>
+
+    <apparelRequired>
+      <li>Outland_HeavyTribalwear</li>
+    </apparelRequired>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+
+  <!-- Prov_Redcap -->
+  <PawnKindDef ParentName="Prov_FeyPawnkind_Base">
+    <defName>Prov_Redcap</defName>
+    <label>redcap</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_FeyHagCoven</defaultFactionType>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_RedcapXenotype MayRequire="Ludeon.RimWorld.Biotech">100</Prov_RedcapXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+	
+    <apparelRequired Inherit="False">
+      <li>BS_Nisse_Cap</li>
+      <li>DevDesigner_WoodElves_Tunic</li>
+      <li>DankPyon_Apparel_Trousers</li>
+      <li>DankPyon_Footwear_BootsPlate</li>
+    </apparelRequired>
+
+	<specificApparelRequirements Inherit="False">
+		<!-- FullHead -->
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<bodyPartGroup>FullHead</bodyPartGroup>
+			<apparelLayer>Overhead</apparelLayer>
+			<requiredTag>BS_Nisse</requiredTag>
+			<stuff>DevilstrandCloth</stuff>
+			<color>(105,41,41)</color>
+		</li>
+		<li>
+			<bodyPartGroup>Torso</bodyPartGroup>
+			<apparelLayer>OnSkin</apparelLayer>
+			<requiredTag>DevDesigner_WoodElves_Tunic</requiredTag>
+			<stuff>Leather_Plain</stuff>
+		</li>
+		<li>
+			<bodyPartGroup>Torso</bodyPartGroup>
+			<apparelLayer>Shell</apparelLayer>
+			<requiredTag>Cape</requiredTag>
+			<stuff>WoolMegasloth</stuff>
+			<color>(105,41,41)</color>
+		</li>
+		<!-- Legs -->
+		<li>
+			<bodyPartGroup>Legs</bodyPartGroup>
+			<apparelLayer>OnSkin</apparelLayer>
+			<requiredTag>DankPyon_Apparel_Trousers</requiredTag>
+			<stuff>Leather_Plain</stuff>
+		</li>
+		<!-- Feet -->
+		<li>
+			<bodyPartGroup>Feet</bodyPartGroup>
+			<apparelLayer>Middle</apparelLayer>
+			<requiredTag>DankPyon_Footwear_BootsPlate</requiredTag>
+			<stuff>Steel</stuff>
+		</li>
+    </specificApparelRequirements>
+    <weaponMoney Inherit="False">120~180</weaponMoney>
+	<weaponTags Inherit="False">
+		<li>MeleeWeapon_Gladius</li>
+    </weaponTags>
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	
+  </PawnKindDef>
+
+
+
+  <!-- Prov_XXX -->
+  <!--<PawnKindDef ParentName="Prov_FeyPawnkind_Base">
+    <defName>Prov_XXX</defName>
+    <label>XXX</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_FeyCivil</defaultFactionType>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_XXXXenotype MayRequire="Ludeon.RimWorld.Biotech">100</Prov_XXXXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+    <weaponMoney Inherit="False">120~180</weaponMoney>
+	<weaponTags Inherit="False">
+		<li>MeleeWeapon_Gladius</li>
+    </weaponTags>
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>-->
+  
+  <!-- Prov_SpriteArcher -->
+  <PawnKindDef ParentName="Prov_FeyPawnkind_Base">
+    <defName>Prov_SpriteArcher</defName>
+    <label>sprite archer</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_FeyCivil</defaultFactionType>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_SpriteXenotype MayRequire="Ludeon.RimWorld.Biotech">100</Prov_SpriteXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+    <weaponMoney Inherit="False">160~300</weaponMoney>
+	<weaponTags Inherit="False">
+		<li>DevDesigner_WoodElves_Bow</li>
+    </weaponTags>
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- Prov_EladrinSwordsman -->
+  <PawnKindDef ParentName="Prov_FeyPawnkind_Base">
+    <defName>Prov_EladrinSwordsman</defName>
+    <label>eladrin swordsman</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_FeyCivil</defaultFactionType>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_EladrinSummerToSpringXenotype MayRequire="Ludeon.RimWorld.Biotech">20</Prov_EladrinSummerToSpringXenotype>
+        <Prov_EladrinSummerToWinterXenotype MayRequire="Ludeon.RimWorld.Biotech">60</Prov_EladrinSummerToWinterXenotype>
+        <Prov_EladrinSummerToAutumnXenotype MayRequire="Ludeon.RimWorld.Biotech">20</Prov_EladrinSummerToAutumnXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+	
+	
+    <apparelTags>
+      <li>DevDesigner_WoodElves_Light</li>
+      <li>DankPyon_Apparel_Braies</li>
+      <li>DankPyon_Footwear_BootsLeather</li>
+    </apparelTags>
+    <specificApparelRequirements>
+	<li>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<only>(200, 200, 50)</only>
+				</li>
+				<li>
+					<only>(0.89, 0.75, 0.06)</only>
+				</li>
+				<li>
+					<only>(0.71, 0.61, 0.12)</only>
+				</li>
+				<li>
+					<only>(0.85, 0.77, 0.25)</only>
+				</li>
+			</options>
+		</colorGenerator>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>OnSkin</apparelLayer>
+        <requiredTag>DevDesigner_WoodElves_Light</requiredTag>
+        <stuff>Cloth</stuff>
+      </li>
+      <li>
+        <bodyPartGroup>Legs</bodyPartGroup>
+        <stuff>Cloth</stuff>
+      </li>
+      <li>
+        <apparelLayer>Overhead</apparelLayer>
+        <requiredTag>DevDesigner_WoodElves_Light</requiredTag>
+        <stuff>Cloth</stuff>
+      </li>
+      <li>
+        <bodyPartGroup>Neck</bodyPartGroup>
+        <apparelLayer>Shell</apparelLayer>
+        <requiredTag>DevDesigner_WoodElves_Cloak</requiredTag>
+        <stuff>Cloth</stuff>
+      </li>
+    </specificApparelRequirements>
+	
+    <weaponMoney Inherit="False">220~300</weaponMoney>
+	<weaponTags Inherit="False">
+		<li>DevDesigner_WoodElves_Sword</li>
+    </weaponTags>
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- Prov_EladrinArcher -->
+  <PawnKindDef ParentName="Prov_FeyPawnkind_Base">
+    <defName>Prov_EladrinArcher</defName>
+    <label>eladrin archer</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_FeyCivil</defaultFactionType>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_EladrinWinterToSpringXenotype MayRequire="Ludeon.RimWorld.Biotech">20</Prov_EladrinWinterToSpringXenotype>
+        <Prov_EladrinWinterToSummerXenotype MayRequire="Ludeon.RimWorld.Biotech">60</Prov_EladrinWinterToSummerXenotype>
+        <Prov_EladrinWinterToAutumnXenotype MayRequire="Ludeon.RimWorld.Biotech">20</Prov_EladrinWinterToAutumnXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+
+    <apparelTags>
+      <li>DevDesigner_WoodElves_Light</li>
+      <li>DankPyon_Apparel_Braies</li>
+      <li>DankPyon_Footwear_BootsLeather</li>
+    </apparelTags>
+    <specificApparelRequirements>
+	<li>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<only>(0.25, 0.6, 0.85)</only>
+				</li>
+				<li>
+					<only>(0.10, 0.26, 0.55)</only>
+				</li>
+				<li>
+					<only>(0.37, 0.60, 0.73)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		</li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>OnSkin</apparelLayer>
+        <requiredTag>DevDesigner_WoodElves_Light</requiredTag>
+        <stuff>Cloth</stuff>
+      </li>
+      <li>
+        <bodyPartGroup>Legs</bodyPartGroup>
+        <stuff>Cloth</stuff>
+      </li>
+      <li>
+        <apparelLayer>Overhead</apparelLayer>
+        <requiredTag>DevDesigner_WoodElves_Light</requiredTag>
+        <stuff>Cloth</stuff>
+      </li>
+      <li>
+        <bodyPartGroup>Neck</bodyPartGroup>
+        <apparelLayer>Shell</apparelLayer>
+        <requiredTag>DevDesigner_WoodElves_Cloak</requiredTag>
+        <stuff>Cloth</stuff>
+      </li>
+    </specificApparelRequirements>
+	
+    <weaponMoney Inherit="False">300~500</weaponMoney>
+	<weaponTags Inherit="False">
+		<li>DevDesigner_WoodElves_Ranged</li>
+    </weaponTags>
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- Prov_DryadClubwoman -->
+  <PawnKindDef ParentName="Prov_FeyPawnkind_Base">
+    <defName>Prov_DryadClubwoman</defName>
+    <label>dryad</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_FeyCivil</defaultFactionType>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_DryadXenotype MayRequire="Ludeon.RimWorld.Biotech">100</Prov_DryadXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+    <weaponMoney Inherit="False">120~180</weaponMoney>
+	<weaponTags Inherit="False">
+		<li>MeleeWeapon_Club</li>
+    </weaponTags>
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- Prov_FeyTrader -->
+  <PawnKindDef ParentName="Prov_FeyPawnkind_Base">
+    <defName>Prov_FeyTrader</defName>
+    <label>bargainer</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_FeyCivil</defaultFactionType>
+    <trader>true</trader>
+    <itemQuality>Good</itemQuality>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_PixieXenotype MayRequire="Ludeon.RimWorld.Biotech">50</Prov_PixieXenotype>
+        <Prov_SatyrXenotype MayRequire="Ludeon.RimWorld.Biotech">50</Prov_SatyrXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+	
+    <apparelRequired Inherit="False">
+      <li>AMT_Apparel_ShortCoat</li>
+      <li>DankPyon_Apparel_Trousers</li>
+    </apparelRequired>
+
+	<specificApparelRequirements Inherit="False">
+		<li>
+			<bodyPartGroup>Torso</bodyPartGroup>
+			<apparelLayer>OnSkin</apparelLayer>
+			<requiredTag>AMT_Apparel_ShortCoat</requiredTag>
+		</li>
+		<li>
+			<bodyPartGroup>Legs</bodyPartGroup>
+			<apparelLayer>OnSkin</apparelLayer>
+			<requiredTag>DankPyon_Apparel_Trousers</requiredTag>
+		</li>
+    </specificApparelRequirements>
+    <weaponMoney Inherit="False">155~200</weaponMoney>
+	<weaponTags Inherit="False">
+		<li>MeleeWeapon_Club</li>
+		<li>DevDesigner_WoodElves_Sword</li>
+		<li>DevDesigner_WoodElves_Ranged</li>
+    </weaponTags>
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+
+
+  
+</Defs>

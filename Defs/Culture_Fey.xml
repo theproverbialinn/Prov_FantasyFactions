@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<CultureDef>
+    <defName>FeyCulture</defName>
+    <label>fey</label>
+    <description>A broad category describing the styles and practices of the fey group.</description>
+	<pawnNameMaker>NamerFey</pawnNameMaker>
+	<pawnNameMakerFemale>NamerFeyFemale</pawnNameMakerFemale>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoRustican</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityRustican</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerRustican</deityTypeMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Rustican</leaderTitleMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalRustican</festivalNameMaker>
+    <allowedPlaceTags>
+      <li>OriginSpacer</li>
+    </allowedPlaceTags>
+    <iconPath>World/WorldObjects/Expanding/FeyTown</iconPath>
+    <thingStyleCategories>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <category>Animalist</category>
+        <priority>2</priority>
+      </li>
+    </thingStyleCategories>
+    <styleItemTags>
+
+    </styleItemTags>
+  </CultureDef>
+
+
+<CultureDef>
+    <defName>HagCulture</defName>
+    <label>minion</label>
+    <description>A broad category describing the styles and practices of the hag-aligned group.</description>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoRustican</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityRustican</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerRustican</deityTypeMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Rustican</leaderTitleMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalRustican</festivalNameMaker>
+    <allowedPlaceTags>
+      <li>OriginSpacer</li>
+    </allowedPlaceTags>
+    <iconPath>World/WorldObjects/Expanding/HagTown</iconPath>
+    <thingStyleCategories>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <category>VME_Esotericism</category>
+        <priority>2</priority>
+      </li>
+    </thingStyleCategories>
+    <styleItemTags>
+
+    </styleItemTags>
+</CultureDef>
+</Defs>

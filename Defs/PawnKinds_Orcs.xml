@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="Prov_OrcsPawnkind_Base" Abstract="true">
+    <race>Human</race>
+    <minGenerationAge>18</minGenerationAge>
+    <maxGenerationAge>30</maxGenerationAge>
+    <defaultFactionType>Prov_OrcFactionBase</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <biocodeWeaponChance>0</biocodeWeaponChance>
+    <humanPregnancyChance>0</humanPregnancyChance>
+    <invNutrition>3</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <itemQuality>Normal</itemQuality>
+    <gearHealthRange>1~1</gearHealthRange>
+    <techHediffsMoney>0~1</techHediffsMoney>
+    <techHediffsTags></techHediffsTags>
+    <disallowedTraits>
+      <li>Wimp</li>
+      <li>Nudist</li>
+    </disallowedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <backstoryCategories>
+      <li>Tribal</li>
+    </backstoryCategories>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Prov_Goblin_Base -->
+  <PawnKindDef Name="Prov_Goblin_Base" Abstract="true" ParentName="Prov_OrcsPawnkind_Base">
+    <label>goblin</label>
+    <combatPower>40</combatPower>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_GoblinXenotype MayRequire="Ludeon.RimWorld.Biotech">100</Prov_GoblinXenotype>
+      </xenotypeChances>
+    </xenotypeSet> 
+    <apparelMoney>200~550</apparelMoney>
+
+
+    <apparelTags>
+      <li>DankPyon_Apparel_Braies</li>
+      <li>DankPyon_Apparel_DirewolfPelt</li>
+    </apparelTags>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  
+  <!-- Prov_GoblinScout -->
+  <PawnKindDef ParentName="Prov_Goblin_Base">
+    <defName>Prov_GoblinScout</defName>
+    <label>goblin bowman</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_OrcRaiders</defaultFactionType>
+
+
+    <apparelMoney>200~550</apparelMoney>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	<skills>
+      <li>
+        <skill>Melee</skill>
+        <range>4~10</range>
+      </li>
+    </skills>
+
+    <initialWillRange>10~24</initialWillRange>
+    <initialResistanceRange>17~47</initialResistanceRange>
+
+    <weaponMoney>300~350</weaponMoney>
+    <weaponTags>
+      <li>MeleeWeapon_Gladius</li>
+    </weaponTags>
+	
+	
+	<modExtensions Inherit="False">
+      <li Class="VFECore.PawnKindDefExtension">
+		<shieldMoney>100~200</shieldMoney>
+		<shieldTags>
+		  <li>VFEV_Shield_Round</li>
+		</shieldTags>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Prov_GoblinBowman -->
+  <PawnKindDef ParentName="Prov_Goblin_Base">
+    <defName>Prov_GoblinBowman</defName>
+    <label>goblin bowman</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_OrcRaiders</defaultFactionType>
+
+
+    <apparelMoney>200~550</apparelMoney>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	<skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~14</range>
+      </li>
+    </skills>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+
+    <initialWillRange>10~24</initialWillRange>
+    <initialResistanceRange>17~47</initialResistanceRange>
+
+    <weaponMoney>300~350</weaponMoney>
+    <weaponTags>
+      <li>Flamebow</li>
+    </weaponTags>
+  </PawnKindDef>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Prov_GoblinSpearman -->
+  <PawnKindDef ParentName="Prov_Goblin_Base">
+    <defName>Prov_GoblinSpearman</defName>
+    <label>goblin spearman</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_OrcRaiders</defaultFactionType>
+
+
+    <apparelMoney>200~550</apparelMoney>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	<skills>
+      <li>
+        <skill>Melee</skill>
+        <range>4~14</range>
+      </li>
+    </skills>
+
+    <initialWillRange>10~24</initialWillRange>
+    <initialResistanceRange>17~47</initialResistanceRange>
+
+    <weaponMoney>300~350</weaponMoney>
+    <weaponTags>
+      <li>MeleeWeapon_Spear</li>
+    </weaponTags>
+	
+
+	
+  </PawnKindDef>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Prov_Orc_Base -->
+  <PawnKindDef Name="Prov_Orc_Base" Abstract="true" ParentName="Prov_OrcsPawnkind_Base">
+    <label>orc</label>
+    <combatPower>40</combatPower>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_OrcXenotype MayRequire="Ludeon.RimWorld.Biotech">100</Prov_OrcXenotype>
+      </xenotypeChances>
+    </xenotypeSet> 
+    <apparelMoney>400~750</apparelMoney>
+    <apparelTags>
+      <li>DankPyon_Apparel_Sackcloth</li>
+      <li>DankPyon_Apparel_DirewolfPelt</li>
+      <li>DankPyon_Apparel_Braies</li>
+      <li>DankPyon_Footwear_BootsLeather</li>
+    </apparelTags>
+	
+	
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Prov_OrcSwordsman -->
+  <PawnKindDef ParentName="Prov_Orc_Base">
+    <defName>Prov_OrcSwordsman</defName>
+    <label>orc swordsman</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_OrcRaiders</defaultFactionType>
+
+    <apparelMoney>200~550</apparelMoney>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	<skills>
+      <li>
+        <skill>Melee</skill>
+        <range>4~14</range>
+      </li>
+    </skills>
+
+    <initialWillRange>10~24</initialWillRange>
+    <initialResistanceRange>17~47</initialResistanceRange>
+
+    <weaponMoney>300~350</weaponMoney>
+    <weaponTags>
+      <li>DankPyon_Greatsword</li>
+    </weaponTags>
+	
+  </PawnKindDef>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Prov_OrcBerserker -->
+  <PawnKindDef ParentName="Prov_Orc_Base">
+    <defName>Prov_OrcBerserker</defName>
+    <label>orc berserker</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_OrcRaiders</defaultFactionType>
+
+    <apparelMoney>200~550</apparelMoney>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	<skills>
+      <li>
+        <skill>Melee</skill>
+        <range>4~14</range>
+      </li>
+    </skills>
+
+    <initialWillRange>10~24</initialWillRange>
+    <initialResistanceRange>17~47</initialResistanceRange>
+
+    <weaponMoney>300~350</weaponMoney>
+    <weaponTags>
+      <li>DankPyon_Handaxe</li>
+    </weaponTags>
+	
+  </PawnKindDef>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Prov_OrcCrossbowman -->
+  <PawnKindDef ParentName="Prov_Orc_Base">
+    <defName>Prov_OrcCrossbowman</defName>
+    <label>orc berserker</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_OrcRaiders</defaultFactionType>
+
+    <apparelMoney>200~550</apparelMoney>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	<skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~14</range>
+      </li>
+    </skills>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+
+    <initialWillRange>10~24</initialWillRange>
+    <initialResistanceRange>17~47</initialResistanceRange>
+
+    <weaponMoney>300~350</weaponMoney>
+    <weaponTags>
+      <li>VFEM_Bow_Crossbow</li>
+    </weaponTags>
+	
+  </PawnKindDef>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Prov_OrcWarchief -->
+  <PawnKindDef ParentName="Prov_Orc_Base">
+    <defName>Prov_OrcWarchief</defName>
+    <label>orc warchief</label>
+    <combatPower>40</combatPower>
+	
+    <factionLeader>true</factionLeader>
+    <defaultFactionType>Prov_OrcRaiders</defaultFactionType>
+
+    <apparelMoney>200~550</apparelMoney>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	<skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~14</range>
+      </li>
+    </skills>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+
+    <initialWillRange>10~24</initialWillRange>
+    <initialResistanceRange>17~47</initialResistanceRange>
+
+    <weaponMoney>300~350</weaponMoney>
+    <weaponTags>
+      <li>VFEM_Bow_Crossbow</li>
+    </weaponTags>
+	
+  </PawnKindDef>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+  <!-- Prov_HalfOrc_Base -->
+  <PawnKindDef Name="Prov_HalfOrc_Base" Abstract="true" ParentName="Prov_OrcsPawnkind_Base">
+    <label>half orc</label>
+    <combatPower>40</combatPower>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_HalfOrcXenotype MayRequire="Ludeon.RimWorld.Biotech">100</Prov_HalfOrcXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelMoney>200~550</apparelMoney>
+	
+    <apparelRequired>
+      <li>DankPyon_Apparel_Hauberk</li>
+      <li>DankPyon_Footwear_BootsLeather</li>
+      <li>DankPyon_Apparel_Braies</li>
+    </apparelRequired>
+
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+  <!-- Prov_HalfOrcTrader -->
+  <PawnKindDef ParentName="Prov_HalfOrc_Base">
+    <defName>Prov_HalfOrcTrader</defName>
+    <defaultFactionType>Prov_OrcRaiders</defaultFactionType>
+    <label>trader</label>
+    <trader>true</trader>
+
+  </PawnKindDef>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+  <!-- Prov_Ogre_Base -->
+  <PawnKindDef Name="Prov_Ogre_Base" Abstract="true" ParentName="Prov_OrcsPawnkind_Base">
+    <label>ogre</label>
+    <combatPower>40</combatPower>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_OgreXenotype MayRequire="Ludeon.RimWorld.Biotech">100</Prov_OgreXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelMoney>200~550</apparelMoney>
+	
+    <apparelRequired>
+      <li>Outland_HeavyTribalwear</li>
+    </apparelRequired>
+
+    <apparelTags>
+      <li>Outland_HeavyTribalwear</li>
+    </apparelTags>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+  <!-- Prov_OgreThrower -->
+  <PawnKindDef ParentName="Prov_Ogre_Base">
+    <defName>Prov_OgreThrower</defName>
+    <label>ogre rock thrower</label>
+    <combatPower>40</combatPower>
+
+    <defaultFactionType>Prov_OrcRaiders</defaultFactionType>
+    <apparelMoney>200~550</apparelMoney>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	<skills>
+      <li>
+        <skill>Melee</skill>
+        <range>4~14</range>
+      </li>
+    </skills>
+
+    <initialWillRange>10~24</initialWillRange>
+    <initialResistanceRange>17~47</initialResistanceRange>
+
+    <weaponMoney>300~350</weaponMoney>
+    <weaponTags>
+      <li>BS_OgreThrowinRock</li>
+    </weaponTags>
+	
+  </PawnKindDef>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Prov_OgreSmasher -->
+  <PawnKindDef ParentName="Prov_Ogre_Base">
+    <defName>Prov_OgreSmasher</defName>
+    <label>ogre smasher</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_OrcRaiders</defaultFactionType>
+
+    <apparelMoney>200~550</apparelMoney>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	<skills>
+      <li>
+        <skill>Melee</skill>
+        <range>4~14</range>
+      </li>
+    </skills>
+
+    <initialWillRange>10~24</initialWillRange>
+    <initialResistanceRange>17~47</initialResistanceRange>
+
+    <weaponMoney>300~350</weaponMoney>
+    <weaponTags>
+      <li>BS_OgreClub</li>
+    </weaponTags>
+	
+  </PawnKindDef>
+</Defs>

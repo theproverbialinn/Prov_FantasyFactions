@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>Prov_Person_Namer</defName>
+    <include>
+      <li>GlobalUtility</li>
+    </include>
+    <rulePack>
+      <rulesFiles>
+        <li>Prov_AdorableStart->Names/AdorableStart</li>
+        <li>Prov_AdorableEnd->Names/AdorableEnd</li>
+        <li>Prov_AdjectivesTree->Names/AdjectivesTree</li>
+        <li>Prov_AdjectivesRiver->Names/AdjectivesRiver</li>
+        <li>Prov_Fey_MaleNames->Names/FeyNames</li>
+        <li>Prov_Fey_FemaleNames->Names/FeyNamesFemale</li>
+        <li>Prov_Orc_MaleNames->Names/OrcNamesMale</li>
+        <li>Prov_Orc_FemaleNames->Names/OrcNamesFemale</li>
+        <li>Prov_Orc_LastNames->Names/OrcNamesLast</li>
+        <li>Prov_OldFashionedFemaleNames->Names/OldFashionedFemaleNames</li>
+        <li>Prov_FemaleRelativeTitle->Names/FemaleRelativeTitle</li>
+        <li>Prov_AdjectiveCreepy->Names/AdjectivesCreepy</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <!-- Fey -->
+  
+  <RulePackDef>
+    <defName>NamerFey</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Prov_Fey_MaleNames]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerFeyFemale</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Prov_Fey_FemaleNames]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>Prov_NamerPixie</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[AdjectiveFriendly]-[ConceptPositive] [Prov_AdorableStart][Prov_AdorableEnd]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>Prov_NamerDryad</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Prov_Fey_FemaleNames] the [Prov_AdjectivesTree]</li>
+        <li>r_name->[Prov_Fey_FemaleNames] [Prov_AdjectivesTree]-[forest_synonym]</li>
+        <li>forest_synonym->Forest</li>
+        <li>forest_synonym->Woods</li>
+        <li>forest_synonym->Undergrowth</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>Prov_NamerNaiad</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Prov_Fey_FemaleNames] the [Prov_AdjectivesRiver]</li>
+        <li>r_name->[Prov_Fey_FemaleNames] [Prov_AdjectivesRiver]-[river_synonym]</li>
+        <li>river_synonym->Waters</li>
+        <li>river_synonym->Stream</li>
+        <li>river_synonym->River</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerFactionFey</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_name->Fey Alliance</li>
+		<li>r_name->The Good Neighbours</li>
+		<li>r_name->The Fair Folk</li>
+		<li>r_name->The Children of the Woods</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>groupname->Words/Nouns/GroupNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+    
+    <RulePackDef>
+    <defName>Prov_NamerPersonHag_Female</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=40)->[Prov_OldFashionedFemaleNames] the [Prov_AdjectiveCreepy]</li>
+        <li>r_name(p=40)->[Prov_FemaleRelativeTitle] [Prov_OldFashionedFemaleNames]</li>
+        <li>r_name(p=40)->[Prov_AdjectiveCreepy] [Prov_OldFashionedFemaleNames]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>Prov_NamerPersonRedcap</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=5)->[AdjectiveBadass] [Gore]</li>
+        <li>r_name(p=2)->[Gore] [Gore]</li>
+        <li>r_name(p=15)->[Prov_AdjectiveCreepy] [BodyPart]</li>
+        <li>r_name(p=10)->[BodyPart] Slicer</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <RulePackDef>
+    <defName>NamerFactionHag</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_name(p=40)->The [ConceptAngsty] Coven</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>groupname->Words/Nouns/GroupNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <RulePackDef>
+    <defName>NamerSettlementFey</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=40)->[feytown_combo]</li>
+        <li>r_name(p=40)->[feytownname_wordgen]</li>
+        <li>feytown_combo->[NamerFeyFemale]'s [geography]</li>
+        <li>feytown_combo->[NamerFey]'s [geography]</li>
+        <li>feytownname_wordgen(p=2)->[Vegetable][TerrainFeature]</li>
+        <li>feytownname_wordgen(p=2)->[AdjectiveNatural][NaturalObject]</li>
+        <li>feytownname_wordgen(p=2)->[TreeType][feytownend]</li>
+        <li>feytownname_wordgen(p=2)->[AdjectiveNatural][feytownend]</li>
+        <li>feytownend->grove</li>
+        <li>feytownend->berry</li>
+        <li>feytownend->field</li>
+        <li>feytownend->pond</li>
+        <li>feytownend->hill</li>
+        <li>feytownend->river</li>
+        <li>feytownend->shimmer</li>
+        <li>feytownend->glint</li>
+        <li>feytownend->wood</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerSettlementHag</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=40)->[Prov_OldFashionedFemaleNames]'s [geography]</li>
+        <li>r_name(p=40)->[TerrainFeature] of [ConceptAngsty]</li>
+        <li>r_name(p=40)->[AdjectiveAngsty] [geography]</li>
+        <li>r_name(p=40)->[ConceptAngsty]'s [geography]</li>
+        <li>r_name(p=40)->[Prov_AdjectiveCreepy] [TerrainFeature]</li>
+        <li>r_name(p=40)->[PersonBadass]'s [ConceptAngsty]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <!-- Orcs -->
+  
+  <RulePackDef>
+    <defName>Prov_NamerPersonOrc_Male</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Prov_Orc_MaleNames] [Prov_Orc_LastNames]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>Prov_NamerPersonOrc_Female</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Prov_Orc_FemaleNames] [Prov_Orc_LastNames]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>Prov_NamerFactionOrc</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_name->Orcs with Forks</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>groupname->Words/Nouns/GroupNames</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Prov_NamerSettlementOrc</defName>
+    <include>
+      <li>Prov_Person_Namer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[orcname_wordgen]</li>
+        <li>orcname_wordgen(p=2)->[PeopleBadass]’s [Place]</li>
+        <li>orcname_wordgen(p=2)->[ConceptBadass][TerrainFeature]</li>
+        <li>orcname_wordgen(p=2)->[Gore] [TerrainFeature]</li>
+        <li>orcname_wordgen(p=2)->[ConceptBadass][Gore]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <RulePackDef>
+    <defName>Prov_LeaderTitleMaker_Orc</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>cultureLeaderTitle->[cultureLeaderAdjective] [cultureLeaderNoun]</li>
+
+        <li>cultureLeaderAdjective->Fearless</li>
+        <li>cultureLeaderAdjective->Bloodthirsty</li>
+        <li>cultureLeaderAdjective->Unstoppable</li>
+
+        <li>cultureLeaderNoun->leader</li>
+        <li>cultureLeaderNoun->chief</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+
+  
+  
+  
+</Defs>
